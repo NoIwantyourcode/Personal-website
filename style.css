@@ -1,0 +1,14 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --nav: linear-gradient(120deg, rgba(11, 48, 86, 0.85), rgba(26, 140, 216, 0.75), rgba(126, 216, 255, 0.65));
+    --sky-top: #0b3056;
+    --sky-mid: #1a8cd8;
+    --sky-bottom: #7ed8ff;
+    --cloud: rgba(255, 255, 255, 0.28);
+}
+
+body {
+    background-color: var(--sky-bottom);
+    
+}
