@@ -1,14 +1,65 @@
-:root {
-    --white: #FFFFFF;
-    --black: #000000;
-    --nav: linear-gradient(120deg, rgba(11, 48, 86, 0.85), rgba(26, 140, 216, 0.75), rgba(126, 216, 255, 0.65));
-    --sky-top: #0b3056;
-    --sky-mid: #1a8cd8;
-    --sky-bottom: #7ed8ff;
-    --cloud: rgba(255, 255, 255, 0.28);
+body {
+    width: auto;
+    height: auto;
+    background: #01579b;
+    background-repeat: no-repeat;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-body {
-    background-color: var(--sky-bottom);
-    
+nav {
+    background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav h1 {
+    color: white;
+    margin: 0;
+    padding: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    white-space: nowrap;
+}
+
+nav div {
+    display: flex;
+    align-items: center
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: inherit;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    font-weight: 500;
+    border-style: solid;
+    border-color: white;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffeb3b;
+    transform: translateY(2px);
 }
