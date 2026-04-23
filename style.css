@@ -1,11 +1,11 @@
 body {
-    width: auto;
-    height: auto;
-    background: #01579b;
-    background-repeat: no-repeat;
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, rgba(255,255,255, 0.12), transparent 30%),
+                linear-gradient(180deg, #0d47a1 0%, #01579b 100%);
+    color: #ffffff;
     font-family: 'Courier New', Courier, monospace;
+    margin: 0;
 }
-
 nav {
     background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -15,7 +15,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 20px 20px;
+    border-radius: 5px;
 }
 
 nav h1 {
@@ -35,7 +36,7 @@ nav div {
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 20;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -62,4 +63,84 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     color: #ffeb3b;
     transform: translateY(2px);
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 840px;
+    margin: 80px auto;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px;
+    border-color: rgba(255, 255, 255, 0.18);
+    border-style: solid;
+    border-radius: 28px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.22);
+}
+
+.hero-cta-heading {
+    text-align: left;
+    font-size: clamp(2.4rem, 5vw, 3.2rem);
+    margin-bottom: 18px;
+    letter-spacing: -0.04em;
+}
+
+.hero-para {
+    text-align: left;
+    color: white;
+    max-width: 700px;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 28px;
+}
+
+.hero-button-projects {
+    display: inline-flex;
+    max-width: 120px;
+    padding: 12px 12px;
+    border-radius: 999px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.9);
+    color: #ffffff;
+    text-decoration: none;
+    transition: translateY(-2px) 0.3s ease, background 0.3s ease;
+    text-align: center;
+    flex-direction: row;
+}
+
+.hero-button-contact {
+    display: inline-flex;
+    max-width: 120px;
+    padding: 12px 12px;
+    border-radius: 999px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.9);
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease, background 0.3s ease;
+    text-align: center;
+    flex-direction: row;
+}
+
+.hero-button-projects:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-2px);
+    transition: 0.3s ease, background 0.3s ease;
+}
+
+.hero-button-contact:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-2px);
+    transition: 0.3s ease background 0.3s ease
+}
+
+h2 {
+    text-align: center;
+    color: white  
 }
