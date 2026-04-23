@@ -82,14 +82,14 @@ nav ul li a:hover {
 }
 
 .hero-cta-heading {
-    text-align: left;
+    text-align: center;
     font-size: clamp(2.4rem, 5vw, 3.2rem);
     margin-bottom: 18px;
     letter-spacing: -0.04em;
 }
 
 .hero-para {
-    text-align: left;
+    text-align: center;
     color: white;
     max-width: 700px;
     font-size: 1.05rem;
@@ -143,4 +143,48 @@ nav ul li a:hover {
 h2 {
     text-align: center;
     color: white  
+}
+
+.project {
+    padding: 0 64px 120px;
+}
+
+.project-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minimax(360px, 1fr));
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 46px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-card h3 {
+    margin: 0 0 16px;
+    font-size: 44px;
+    color: #000000
+}
+
+.project-card p {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #000000;
 }
