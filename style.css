@@ -347,3 +347,28 @@ h2 {
     transition: 0.3s ease, background 0.3s ease;
     margin: 15px
 }
+
+body {
+    cursor: default;
+}
+
+.cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.18s ease-out, opacity 0.25s ease-out;
+    z-index: 9999;
+    opacity: 1;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 10%, rgba(168, 233, 255, 0.55) 40%, rgba(80, 211, 255, 0.5) 70%);
+    box-shadow: 0 0 18px rgba(168, 233, 255, 0.8), 0 0 40px rgba(94, 214, 255, 0.4);
+}
+
+.cursor-glow--active {
+    transform: translate(-50%, -50%);
+    transform: scale(1.05);
+}

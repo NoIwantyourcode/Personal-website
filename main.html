@@ -12,6 +12,7 @@
         </style>
     </head>
     <body>
+        <div class="cursor-glow"></div>
         <nav>
             <h1>Welcome to Naytik's website!</h1>
             <div>
@@ -108,7 +109,7 @@
                 <a href="https://flavortown.hackclub.com/projects/2368">
                     <div class="project-card">
                         <h3>Project name: SAFMC 2026</h3>
-                        <p>this is glider competition I had to make gliders for! I recorded all my progress in Hack Club Flavortown.</p>
+                        <p>this is glider competition I had to make gliders for! I recorded all my progress in Hack Club Flavortown. Unfortunately, We lost the glider competition :( I really hope we have better luck next year</p>
                         <img class="image" src="images/glider.jpg">
                     </div>
                 </a>
@@ -122,7 +123,7 @@
                 <a href="https://blueprint.hackclub.com/projects/6113">
                     <div class="project-card">
                         <h3>Project: Flight Controller</h3>
-                        <p>This is a flight controller I designed for hack club blueprint, It was never made because it was simply too expensive too make</p>
+                        <p>This is a flight controller I designed for hack club blueprint, It was never made because it was simply too expensive too make, I tried to reduce the cost of it but it simply wouldn't be possible, The amount of time I spent on it was just not enough to justify the funding I needed</p>
                         <img class="image" src="images/flight-controller.png">
                     </div>
                 </a>
@@ -136,7 +137,7 @@
                 <a href="">
                     <div class="project-card">
                         <h3>Future projects</h3>
-                        <p>I will be making more projects in the future, Keep an eye out to see what I make next</p>
+                        <p>I will be making more projects in the future, Keep an eye out to see what I make next. Some projects I hope to make or complete soon include more RC planes and just general electronic stuff to improve my practical skills</p>
                     </div>
                 </a>
             </div>
@@ -173,4 +174,20 @@
                     </a>
         </section>
     </body>
+    <script>
+        const cursorGlow = document.querySelector('.cursor-glow');
+
+        document.addEventListener('mousemove', (event) => {
+            cursorGlow.style.left = `${event.clientX}px`;
+            cursorGlow.style.top = `${event.clientY}px`;
+        });
+
+        document.addEventListener('mousedown', () => {
+            cursorGlow.classList.add('cursor-glow--active');
+        });
+
+        document.addEventListener('mouseup', () => {
+            cursorGlow.classList.remove('cursor-glow--active');
+        });
+    </script>
 </html>
