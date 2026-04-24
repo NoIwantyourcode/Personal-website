@@ -53,7 +53,7 @@ nav ul li a {
     text-align: center;
     padding: 16px 20px;
     text-decoration: none;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     font-weight: 500;
     border-style: solid;
     border-color: white;
@@ -62,7 +62,7 @@ nav ul li a {
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     color: #ffeb3b;
-    transform: translateY(2px);
+    transform: translateY(-3px);
 }
 
 .hero-cta {
@@ -95,7 +95,14 @@ nav ul li a:hover {
     font-size: 1.05rem;
     line-height: 1.75;
     color: rgba(255, 255, 255, 0.92);
-    margin-bottom: 28px;
+    margin: 0 auto 28px;
+}
+
+.hero-para-2 {
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto 28px;
 }
 
 .hero-button-projects {
@@ -108,7 +115,7 @@ nav ul li a:hover {
     border-color: rgba(255, 255, 255, 0.9);
     color: #ffffff;
     text-decoration: none;
-    transition: translateY(-2px) 0.3s ease, background 0.3s ease;
+    transition: 0.3s ease, background 0.3s ease;
     text-align: center;
     flex-direction: row;
 }
@@ -128,6 +135,21 @@ nav ul li a:hover {
     flex-direction: row;
 }
 
+.hero-button-hobbies {
+    display: inline-flex;
+    max-width: 120px;
+    padding: 12px 12px;
+    border: 1px;
+    border-radius: 999px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.9);
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease, background 0.3s ease;
+    text-align: center;
+    flex-direction: row;
+}
+
 .hero-button-projects:hover {
     background: rgba(255, 255, 255, 0.14);
     transform: translateY(-2px);
@@ -137,16 +159,62 @@ nav ul li a:hover {
 .hero-button-contact:hover {
     background: rgba(255, 255, 255, 0.14);
     transform: translateY(-2px);
-    transition: 0.3s ease background 0.3s ease
+    transition: 0.3s ease, background 0.3s ease
+}
+
+.hero-button-hobbies:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-2px);
+    transition: 0.3s ease, background 0.3s ease
+}
+
+.hobby-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minimax(360px, 1fr));
+}
+
+.hobby-card {
+    border-radius: 30px;
+    margin: 10px;
+    padding: 46px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 70px rgba(129, 209, 238, 0.3);
+    border: 3px;
+    border-style: solid;
+    border-color: #5cd8ee;
+}
+
+.hobby-card h3 {
+    margin: 15px;
+    font-size: 30px;
+    color: #ffffff
+}
+
+.hobby-card p {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #ffffff;
 }
 
 h2 {
     text-align: center;
-    color: white  
+    color: white;
 }
 
 .project {
-    padding: 0 64px 120px;
+    padding: 64px 64px;
 }
 
 .project-grid {
@@ -162,12 +230,22 @@ h2 {
     padding: 46px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: row;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 30px 70px rgba(139, 209, 238, 0.3);
+    border: 3px;
+    border-style: solid;
+    border-color: #5cd8ee;
+    .image {
+        transform: translateY(-15px);
+        max-width: 550px;
+        max-height: auto;
+    }
 }
 
 .project-card-link {
@@ -177,9 +255,10 @@ h2 {
 }
 
 .project-card h3 {
-    margin: 0 0 16px;
+    margin: 15px;
     font-size: 44px;
-    color: #000000
+    color: #000000;
+    max-width: 300px
 }
 
 .project-card p {
@@ -187,4 +266,84 @@ h2 {
     font-size: 24px;
     line-height: 1.5;
     color: #000000;
+    max-width: 450px
+}
+
+.contacts {
+    list-style-type: none;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 20px auto 0;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    width: auto;
+    height: auto;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.contact-info h3 {
+    margin: 0 0 4px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.contact-card.github:hover {
+    border-color: #6cc644;
+    box-shadow: 0 10px 30px rgba(108, 198, 68, 0.3);
+}
+
+.contact-card.slack:hover {
+    border-color: #4a154b;
+    box-shadow: 0 10px 30px rgba(74, 21, 75, 0.3);
+}
+
+.contact-card.instagram:hover {
+    border-color: #e4405f;
+    box-shadow: 0 10px 30px rgba(228, 64, 95, 0.3);
+}
+
+.contact-card.email:hover {
+    border-color: #ea4335;
+    box-shadow: 0 10px 30px rgba(234, 67, 53, 0.3);
+}
+
+.image {
+    max-width: 500px;
+    max-height: auto;
+    display: inline-flex;
+    align-items: right;
+    transition: 0.3s ease, background 0.3s ease;
+    margin: 15px
 }
